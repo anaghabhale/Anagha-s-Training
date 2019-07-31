@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeatherForecastModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="weatherDataResponseId" Type="int" Nullable="false" />
+    <Property Name="Summary" Type="varchar" MaxLength="250" />
+    <Property Name="Icon" Type="varchar" MaxLength="250" />
+    <Property Name="SunriseTime" Type="datetime" />
+    <Property Name="SunseTime" Type="datetime" />
+    <Property Name="MoonPhase" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecipIntensityMax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipIntensityMaxTime" Type="datetime" />
+    <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureHigh" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureHighTime" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureLow" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureLowTime" Type="datetime" />
+    <Property Name="apparentTemperatureHigh" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="apparentTemperatureHighTime" Type="datetime" />
+    <Property Name="apparentTemperatureLow" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="apparentTemperatureLowTime" Type="datetime" />
+    <Property Name="DewPoint" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Humidity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Pressure" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="windSpeed" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="windGust" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="windGustTime" Type="datetime" />
+    <Property Name="windBearing" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UvIndex" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CloudCover" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="uvIndexTime" Type="datetime" />
+    <Property Name="Visibility" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Ozone" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureMin" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureMinTime" Type="datetime" />
+    <Property Name="temperatureMax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureMaxTime" Type="datetime" />
+    <Property Name="apparentTemperatureMin" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="apparentTemperatureMinTime" Type="datetime" />
+    <Property Name="apparentTemperatureMax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="apparentTemperatureMaxTime" Type="datetime" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblHourly">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="weatherDataResponseId" Type="int" Nullable="false" />
+    <Property Name="Summary" Type="text" />
+    <Property Name="Icon" Type="text" />
+    <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Temperature" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="apparentTemperature" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DewPoint" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Humidity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Pressure" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="windSpeed" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="windGust" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="windBearing" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UvIndex" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CloudCover" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Visibility" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Ozone" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblMinutely">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="weatherDataResponseId" Type="int" Nullable="false" />
+    <Property Name="Summary" Type="text" />
+    <Property Name="Icon" Type="text" />
+    <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecipIntensityError" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblWeatherDataResponse">
+    <Key>
+      <PropertyRef Name="weatherDataResponseId" />
+    </Key>
+    <Property Name="weatherDataResponseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Long" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TimeZone" Type="varchar" MaxLength="100" />
+    <Property Name="ApparentTemperature" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Pressure" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CloudCover" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DewPoint" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Humidity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MoonPhase" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Ozone" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecipProbability" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SunriseTime" Type="datetime" />
+    <Property Name="SunseTime" Type="datetime" />
+    <Property Name="RequestTime" Type="datetime" />
+    <Property Name="Temperature" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UvIndex" Type="int" />
+    <Property Name="Summary" Type="text" />
+    <Property Name="Icon" Type="text" />
+    <Property Name="EntryDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <Association Name="FK_tblDaily_tblWeatherDataResponse">
+    <End Role="tblWeatherDataResponse" Type="Self.tblWeatherDataResponse" Multiplicity="1" />
+    <End Role="tblDaily" Type="Self.tblDaily" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblWeatherDataResponse">
+        <PropertyRef Name="weatherDataResponseId" />
+      </Principal>
+      <Dependent Role="tblDaily">
+        <PropertyRef Name="weatherDataResponseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblHourly_tblWeatherDataResponse">
+    <End Role="tblWeatherDataResponse" Type="Self.tblWeatherDataResponse" Multiplicity="1" />
+    <End Role="tblHourly" Type="Self.tblHourly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblWeatherDataResponse">
+        <PropertyRef Name="weatherDataResponseId" />
+      </Principal>
+      <Dependent Role="tblHourly">
+        <PropertyRef Name="weatherDataResponseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMinutely_tblWeatherDataResponse">
+    <End Role="tblWeatherDataResponse" Type="Self.tblWeatherDataResponse" Multiplicity="1" />
+    <End Role="tblMinutely" Type="Self.tblMinutely" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblWeatherDataResponse">
+        <PropertyRef Name="weatherDataResponseId" />
+      </Principal>
+      <Dependent Role="tblMinutely">
+        <PropertyRef Name="weatherDataResponseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WeatherForecastModelStoreContainer">
+    <EntitySet Name="tblDaily" EntityType="Self.tblDaily" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblHourly" EntityType="Self.tblHourly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMinutely" EntityType="Self.tblMinutely" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWeatherDataResponse" EntityType="Self.tblWeatherDataResponse" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tblDaily_tblWeatherDataResponse" Association="Self.FK_tblDaily_tblWeatherDataResponse">
+      <End Role="tblWeatherDataResponse" EntitySet="tblWeatherDataResponse" />
+      <End Role="tblDaily" EntitySet="tblDaily" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblHourly_tblWeatherDataResponse" Association="Self.FK_tblHourly_tblWeatherDataResponse">
+      <End Role="tblWeatherDataResponse" EntitySet="tblWeatherDataResponse" />
+      <End Role="tblHourly" EntitySet="tblHourly" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMinutely_tblWeatherDataResponse" Association="Self.FK_tblMinutely_tblWeatherDataResponse">
+      <End Role="tblWeatherDataResponse" EntitySet="tblWeatherDataResponse" />
+      <End Role="tblMinutely" EntitySet="tblMinutely" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

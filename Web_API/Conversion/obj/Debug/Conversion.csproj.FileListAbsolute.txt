@@ -1,0 +1,12 @@
+E:\Practice\Web_API\Conversion\obj\Debug\Conversion.csprojResolveAssemblyReference.cache
+E:\Practice\Web_API\Conversion\bin\Conversion.dll.config
+E:\Practice\Web_API\Conversion\bin\Conversion.dll
+E:\Practice\Web_API\Conversion\bin\Conversion.pdb
+E:\Practice\Web_API\Conversion\bin\EntityFramework.dll
+E:\Practice\Web_API\Conversion\bin\EntityFramework.SqlServer.dll
+E:\Practice\Web_API\Conversion\bin\ModelData.dll
+E:\Practice\Web_API\Conversion\bin\ModelData.pdb
+E:\Practice\Web_API\Conversion\bin\EntityFramework.xml
+E:\Practice\Web_API\Conversion\bin\EntityFramework.SqlServer.xml
+E:\Practice\Web_API\Conversion\obj\Debug\Conversion.dll
+E:\Practice\Web_API\Conversion\obj\Debug\Conversion.pdb

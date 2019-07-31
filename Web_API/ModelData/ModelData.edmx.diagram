@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc47d4c8f90a45dbb80a5dd511b10b0a" Name="Diagram1">
+        <EntityTypeShape EntityType="WeatherForecastModel.tblDaily" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WeatherForecastModel.tblHourly" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WeatherForecastModel.tblMinutely" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WeatherForecastModel.tblWeatherDataResponse" Width="2" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="WeatherForecastModel.FK_tblDaily_tblWeatherDataResponse" ManuallyRouted="false" />
+        <AssociationConnector Association="WeatherForecastModel.FK_tblHourly_tblWeatherDataResponse" ManuallyRouted="false" />
+        <AssociationConnector Association="WeatherForecastModel.FK_tblMinutely_tblWeatherDataResponse" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

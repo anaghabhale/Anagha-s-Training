@@ -1,0 +1,10 @@
+E:\Practice\Web_API\ModelData\bin\Debug\ModelData.dll.config
+E:\Practice\Web_API\ModelData\bin\Debug\ModelData.dll
+E:\Practice\Web_API\ModelData\bin\Debug\ModelData.pdb
+E:\Practice\Web_API\ModelData\bin\Debug\EntityFramework.dll
+E:\Practice\Web_API\ModelData\bin\Debug\EntityFramework.SqlServer.dll
+E:\Practice\Web_API\ModelData\bin\Debug\EntityFramework.xml
+E:\Practice\Web_API\ModelData\bin\Debug\EntityFramework.SqlServer.xml
+E:\Practice\Web_API\ModelData\obj\Debug\ModelData.csprojResolveAssemblyReference.cache
+E:\Practice\Web_API\ModelData\obj\Debug\ModelData.dll
+E:\Practice\Web_API\ModelData\obj\Debug\ModelData.pdb

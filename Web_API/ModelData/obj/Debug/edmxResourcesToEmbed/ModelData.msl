@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeatherForecastModelStoreContainer" CdmEntityContainer="WeatherForecastEntities1">
+    <EntitySetMapping Name="tblDailies">
+      <EntityTypeMapping TypeName="WeatherForecastModel.tblDaily">
+        <MappingFragment StoreEntitySet="tblDaily">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="weatherDataResponseId" ColumnName="weatherDataResponseId" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="SunriseTime" ColumnName="SunriseTime" />
+          <ScalarProperty Name="SunseTime" ColumnName="SunseTime" />
+          <ScalarProperty Name="MoonPhase" ColumnName="MoonPhase" />
+          <ScalarProperty Name="PrecipIntensity" ColumnName="PrecipIntensity" />
+          <ScalarProperty Name="PrecipIntensityMax" ColumnName="PrecipIntensityMax" />
+          <ScalarProperty Name="precipIntensityMaxTime" ColumnName="precipIntensityMaxTime" />
+          <ScalarProperty Name="precipProbability" ColumnName="precipProbability" />
+          <ScalarProperty Name="precipType" ColumnName="precipType" />
+          <ScalarProperty Name="temperatureHigh" ColumnName="temperatureHigh" />
+          <ScalarProperty Name="temperatureHighTime" ColumnName="temperatureHighTime" />
+          <ScalarProperty Name="temperatureLow" ColumnName="temperatureLow" />
+          <ScalarProperty Name="temperatureLowTime" ColumnName="temperatureLowTime" />
+          <ScalarProperty Name="apparentTemperatureHigh" ColumnName="apparentTemperatureHigh" />
+          <ScalarProperty Name="apparentTemperatureHighTime" ColumnName="apparentTemperatureHighTime" />
+          <ScalarProperty Name="apparentTemperatureLow" ColumnName="apparentTemperatureLow" />
+          <ScalarProperty Name="apparentTemperatureLowTime" ColumnName="apparentTemperatureLowTime" />
+          <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="windSpeed" ColumnName="windSpeed" />
+          <ScalarProperty Name="windGust" ColumnName="windGust" />
+          <ScalarProperty Name="windGustTime" ColumnName="windGustTime" />
+          <ScalarProperty Name="windBearing" ColumnName="windBearing" />
+          <ScalarProperty Name="UvIndex" ColumnName="UvIndex" />
+          <ScalarProperty Name="CloudCover" ColumnName="CloudCover" />
+          <ScalarProperty Name="uvIndexTime" ColumnName="uvIndexTime" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+          <ScalarProperty Name="Ozone" ColumnName="Ozone" />
+          <ScalarProperty Name="temperatureMin" ColumnName="temperatureMin" />
+          <ScalarProperty Name="temperatureMinTime" ColumnName="temperatureMinTime" />
+          <ScalarProperty Name="temperatureMax" ColumnName="temperatureMax" />
+          <ScalarProperty Name="temperatureMaxTime" ColumnName="temperatureMaxTime" />
+          <ScalarProperty Name="apparentTemperatureMin" ColumnName="apparentTemperatureMin" />
+          <ScalarProperty Name="apparentTemperatureMinTime" ColumnName="apparentTemperatureMinTime" />
+          <ScalarProperty Name="apparentTemperatureMax" ColumnName="apparentTemperatureMax" />
+          <ScalarProperty Name="apparentTemperatureMaxTime" ColumnName="apparentTemperatureMaxTime" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHourlies">
+      <EntityTypeMapping TypeName="WeatherForecastModel.tblHourly">
+        <MappingFragment StoreEntitySet="tblHourly">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="weatherDataResponseId" ColumnName="weatherDataResponseId" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="PrecipIntensity" ColumnName="PrecipIntensity" />
+          <ScalarProperty Name="precipProbability" ColumnName="precipProbability" />
+          <ScalarProperty Name="precipType" ColumnName="precipType" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="apparentTemperature" ColumnName="apparentTemperature" />
+          <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="windSpeed" ColumnName="windSpeed" />
+          <ScalarProperty Name="windGust" ColumnName="windGust" />
+          <ScalarProperty Name="windBearing" ColumnName="windBearing" />
+          <ScalarProperty Name="UvIndex" ColumnName="UvIndex" />
+          <ScalarProperty Name="CloudCover" ColumnName="CloudCover" />
+          <ScalarProperty Name="Visibility" ColumnName="Visibility" />
+          <ScalarProperty Name="Ozone" ColumnName="Ozone" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMinutelies">
+      <EntityTypeMapping TypeName="WeatherForecastModel.tblMinutely">
+        <MappingFragment StoreEntitySet="tblMinutely">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="weatherDataResponseId" ColumnName="weatherDataResponseId" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="PrecipIntensity" ColumnName="PrecipIntensity" />
+          <ScalarProperty Name="PrecipIntensityError" ColumnName="PrecipIntensityError" />
+          <ScalarProperty Name="precipProbability" ColumnName="precipProbability" />
+          <ScalarProperty Name="precipType" ColumnName="precipType" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWeatherDataResponses">
+      <EntityTypeMapping TypeName="WeatherForecastModel.tblWeatherDataResponse">
+        <MappingFragment StoreEntitySet="tblWeatherDataResponse">
+          <ScalarProperty Name="weatherDataResponseId" ColumnName="weatherDataResponseId" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Long" ColumnName="Long" />
+          <ScalarProperty Name="TimeZone" ColumnName="TimeZone" />
+          <ScalarProperty Name="ApparentTemperature" ColumnName="ApparentTemperature" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="CloudCover" ColumnName="CloudCover" />
+          <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="PrecipIntensity" ColumnName="PrecipIntensity" />
+          <ScalarProperty Name="MoonPhase" ColumnName="MoonPhase" />
+          <ScalarProperty Name="Ozone" ColumnName="Ozone" />
+          <ScalarProperty Name="PrecipProbability" ColumnName="PrecipProbability" />
+          <ScalarProperty Name="SunriseTime" ColumnName="SunriseTime" />
+          <ScalarProperty Name="SunseTime" ColumnName="SunseTime" />
+          <ScalarProperty Name="RequestTime" ColumnName="RequestTime" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="UvIndex" ColumnName="UvIndex" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
