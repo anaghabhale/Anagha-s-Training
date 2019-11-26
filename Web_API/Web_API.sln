@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelData", "ModelData\Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC5Demo", "MVC5Demo\MVC5Demo.csproj", "{5E233A55-538D-4D07-81B8-2BF5C97FBBDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForcast.WebAPI", "WeatherForcast.WebAPI\WeatherForcast.WebAPI.csproj", "{D4E21D9F-FF3F-4DA2-8216-27F1EF7FDC5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{5E233A55-538D-4D07-81B8-2BF5C97FBBDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E233A55-538D-4D07-81B8-2BF5C97FBBDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E233A55-538D-4D07-81B8-2BF5C97FBBDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E21D9F-FF3F-4DA2-8216-27F1EF7FDC5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E21D9F-FF3F-4DA2-8216-27F1EF7FDC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E21D9F-FF3F-4DA2-8216-27F1EF7FDC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E21D9F-FF3F-4DA2-8216-27F1EF7FDC5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

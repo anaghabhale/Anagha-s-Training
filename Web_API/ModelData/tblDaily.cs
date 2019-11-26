@@ -25,9 +25,9 @@ namespace ModelData
         public Nullable<decimal> PrecipIntensityMax { get; set; }
         public Nullable<System.DateTime> precipIntensityMaxTime { get; set; }
         public Nullable<decimal> precipProbability { get; set; }
-        public Nullable<decimal> precipType { get; set; }
+        public string precipType { get; set; }
         public Nullable<decimal> temperatureHigh { get; set; }
-        public Nullable<decimal> temperatureHighTime { get; set; }
+        public Nullable<System.DateTime> temperatureHighTime { get; set; }
         public Nullable<decimal> temperatureLow { get; set; }
         public Nullable<System.DateTime> temperatureLowTime { get; set; }
         public Nullable<decimal> apparentTemperatureHigh { get; set; }

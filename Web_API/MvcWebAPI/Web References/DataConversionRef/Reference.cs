@@ -23,7 +23,7 @@ namespace MvcWebAPI.DataConversionRef {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="DataConversionSoap", Namespace="http://tempuri.org/")]
@@ -189,7 +189,7 @@ namespace MvcWebAPI.DataConversionRef {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -239,6 +239,12 @@ namespace MvcWebAPI.DataConversionRef {
         private System.Nullable<System.DateTime> entryDateField;
         
         private System.Nullable<bool> isActiveField;
+        
+        private tblDaily[] tblDailiesField;
+        
+        private tblHourly[] tblHourliesField;
+        
+        private tblMinutely[] tblMinuteliesField;
         
         /// <remarks/>
         public int weatherDataResponseId {
@@ -477,14 +483,1041 @@ namespace MvcWebAPI.DataConversionRef {
                 this.isActiveField = value;
             }
         }
+        
+        /// <remarks/>
+        public tblDaily[] tblDailies {
+            get {
+                return this.tblDailiesField;
+            }
+            set {
+                this.tblDailiesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public tblHourly[] tblHourlies {
+            get {
+                return this.tblHourliesField;
+            }
+            set {
+                this.tblHourliesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public tblMinutely[] tblMinutelies {
+            get {
+                return this.tblMinuteliesField;
+            }
+            set {
+                this.tblMinuteliesField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class tblDaily {
+        
+        private int idField;
+        
+        private int weatherDataResponseIdField;
+        
+        private string summaryField;
+        
+        private string iconField;
+        
+        private System.Nullable<System.DateTime> sunriseTimeField;
+        
+        private System.Nullable<System.DateTime> sunseTimeField;
+        
+        private System.Nullable<decimal> moonPhaseField;
+        
+        private System.Nullable<decimal> precipIntensityField;
+        
+        private System.Nullable<decimal> precipIntensityMaxField;
+        
+        private System.Nullable<System.DateTime> precipIntensityMaxTimeField;
+        
+        private System.Nullable<decimal> precipProbabilityField;
+        
+        private string precipTypeField;
+        
+        private System.Nullable<decimal> temperatureHighField;
+        
+        private System.Nullable<System.DateTime> temperatureHighTimeField;
+        
+        private System.Nullable<decimal> temperatureLowField;
+        
+        private System.Nullable<System.DateTime> temperatureLowTimeField;
+        
+        private System.Nullable<decimal> apparentTemperatureHighField;
+        
+        private System.Nullable<System.DateTime> apparentTemperatureHighTimeField;
+        
+        private System.Nullable<decimal> apparentTemperatureLowField;
+        
+        private System.Nullable<System.DateTime> apparentTemperatureLowTimeField;
+        
+        private System.Nullable<decimal> dewPointField;
+        
+        private System.Nullable<decimal> humidityField;
+        
+        private System.Nullable<decimal> pressureField;
+        
+        private System.Nullable<decimal> windSpeedField;
+        
+        private System.Nullable<decimal> windGustField;
+        
+        private System.Nullable<System.DateTime> windGustTimeField;
+        
+        private System.Nullable<decimal> windBearingField;
+        
+        private System.Nullable<decimal> uvIndexField;
+        
+        private System.Nullable<decimal> cloudCoverField;
+        
+        private System.Nullable<System.DateTime> uvIndexTimeField;
+        
+        private System.Nullable<decimal> visibilityField;
+        
+        private System.Nullable<decimal> ozoneField;
+        
+        private System.Nullable<decimal> temperatureMinField;
+        
+        private System.Nullable<System.DateTime> temperatureMinTimeField;
+        
+        private System.Nullable<decimal> temperatureMaxField;
+        
+        private System.Nullable<System.DateTime> temperatureMaxTimeField;
+        
+        private System.Nullable<decimal> apparentTemperatureMinField;
+        
+        private System.Nullable<System.DateTime> apparentTemperatureMinTimeField;
+        
+        private System.Nullable<decimal> apparentTemperatureMaxField;
+        
+        private System.Nullable<System.DateTime> apparentTemperatureMaxTimeField;
+        
+        private System.Nullable<System.DateTime> entryDateField;
+        
+        private System.Nullable<bool> isActiveField;
+        
+        private tblWeatherDataResponse tblWeatherDataResponseField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int weatherDataResponseId {
+            get {
+                return this.weatherDataResponseIdField;
+            }
+            set {
+                this.weatherDataResponseIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Icon {
+            get {
+                return this.iconField;
+            }
+            set {
+                this.iconField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> SunriseTime {
+            get {
+                return this.sunriseTimeField;
+            }
+            set {
+                this.sunriseTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> SunseTime {
+            get {
+                return this.sunseTimeField;
+            }
+            set {
+                this.sunseTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> MoonPhase {
+            get {
+                return this.moonPhaseField;
+            }
+            set {
+                this.moonPhaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> PrecipIntensity {
+            get {
+                return this.precipIntensityField;
+            }
+            set {
+                this.precipIntensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> PrecipIntensityMax {
+            get {
+                return this.precipIntensityMaxField;
+            }
+            set {
+                this.precipIntensityMaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> precipIntensityMaxTime {
+            get {
+                return this.precipIntensityMaxTimeField;
+            }
+            set {
+                this.precipIntensityMaxTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> precipProbability {
+            get {
+                return this.precipProbabilityField;
+            }
+            set {
+                this.precipProbabilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string precipType {
+            get {
+                return this.precipTypeField;
+            }
+            set {
+                this.precipTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> temperatureHigh {
+            get {
+                return this.temperatureHighField;
+            }
+            set {
+                this.temperatureHighField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> temperatureHighTime {
+            get {
+                return this.temperatureHighTimeField;
+            }
+            set {
+                this.temperatureHighTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> temperatureLow {
+            get {
+                return this.temperatureLowField;
+            }
+            set {
+                this.temperatureLowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> temperatureLowTime {
+            get {
+                return this.temperatureLowTimeField;
+            }
+            set {
+                this.temperatureLowTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> apparentTemperatureHigh {
+            get {
+                return this.apparentTemperatureHighField;
+            }
+            set {
+                this.apparentTemperatureHighField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> apparentTemperatureHighTime {
+            get {
+                return this.apparentTemperatureHighTimeField;
+            }
+            set {
+                this.apparentTemperatureHighTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> apparentTemperatureLow {
+            get {
+                return this.apparentTemperatureLowField;
+            }
+            set {
+                this.apparentTemperatureLowField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> apparentTemperatureLowTime {
+            get {
+                return this.apparentTemperatureLowTimeField;
+            }
+            set {
+                this.apparentTemperatureLowTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> DewPoint {
+            get {
+                return this.dewPointField;
+            }
+            set {
+                this.dewPointField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Humidity {
+            get {
+                return this.humidityField;
+            }
+            set {
+                this.humidityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Pressure {
+            get {
+                return this.pressureField;
+            }
+            set {
+                this.pressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> windSpeed {
+            get {
+                return this.windSpeedField;
+            }
+            set {
+                this.windSpeedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> windGust {
+            get {
+                return this.windGustField;
+            }
+            set {
+                this.windGustField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> windGustTime {
+            get {
+                return this.windGustTimeField;
+            }
+            set {
+                this.windGustTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> windBearing {
+            get {
+                return this.windBearingField;
+            }
+            set {
+                this.windBearingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> UvIndex {
+            get {
+                return this.uvIndexField;
+            }
+            set {
+                this.uvIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> CloudCover {
+            get {
+                return this.cloudCoverField;
+            }
+            set {
+                this.cloudCoverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> uvIndexTime {
+            get {
+                return this.uvIndexTimeField;
+            }
+            set {
+                this.uvIndexTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Visibility {
+            get {
+                return this.visibilityField;
+            }
+            set {
+                this.visibilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Ozone {
+            get {
+                return this.ozoneField;
+            }
+            set {
+                this.ozoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> temperatureMin {
+            get {
+                return this.temperatureMinField;
+            }
+            set {
+                this.temperatureMinField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> temperatureMinTime {
+            get {
+                return this.temperatureMinTimeField;
+            }
+            set {
+                this.temperatureMinTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> temperatureMax {
+            get {
+                return this.temperatureMaxField;
+            }
+            set {
+                this.temperatureMaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> temperatureMaxTime {
+            get {
+                return this.temperatureMaxTimeField;
+            }
+            set {
+                this.temperatureMaxTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> apparentTemperatureMin {
+            get {
+                return this.apparentTemperatureMinField;
+            }
+            set {
+                this.apparentTemperatureMinField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> apparentTemperatureMinTime {
+            get {
+                return this.apparentTemperatureMinTimeField;
+            }
+            set {
+                this.apparentTemperatureMinTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> apparentTemperatureMax {
+            get {
+                return this.apparentTemperatureMaxField;
+            }
+            set {
+                this.apparentTemperatureMaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> apparentTemperatureMaxTime {
+            get {
+                return this.apparentTemperatureMaxTimeField;
+            }
+            set {
+                this.apparentTemperatureMaxTimeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> EntryDate {
+            get {
+                return this.entryDateField;
+            }
+            set {
+                this.entryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.isActiveField;
+            }
+            set {
+                this.isActiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public tblWeatherDataResponse tblWeatherDataResponse {
+            get {
+                return this.tblWeatherDataResponseField;
+            }
+            set {
+                this.tblWeatherDataResponseField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class tblMinutely {
+        
+        private int idField;
+        
+        private int weatherDataResponseIdField;
+        
+        private string summaryField;
+        
+        private string iconField;
+        
+        private System.Nullable<decimal> precipIntensityField;
+        
+        private System.Nullable<decimal> precipIntensityErrorField;
+        
+        private System.Nullable<decimal> precipProbabilityField;
+        
+        private string precipTypeField;
+        
+        private System.Nullable<System.DateTime> entryDateField;
+        
+        private System.Nullable<bool> isActiveField;
+        
+        private tblWeatherDataResponse tblWeatherDataResponseField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int weatherDataResponseId {
+            get {
+                return this.weatherDataResponseIdField;
+            }
+            set {
+                this.weatherDataResponseIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Icon {
+            get {
+                return this.iconField;
+            }
+            set {
+                this.iconField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> PrecipIntensity {
+            get {
+                return this.precipIntensityField;
+            }
+            set {
+                this.precipIntensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> PrecipIntensityError {
+            get {
+                return this.precipIntensityErrorField;
+            }
+            set {
+                this.precipIntensityErrorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> precipProbability {
+            get {
+                return this.precipProbabilityField;
+            }
+            set {
+                this.precipProbabilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string precipType {
+            get {
+                return this.precipTypeField;
+            }
+            set {
+                this.precipTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> EntryDate {
+            get {
+                return this.entryDateField;
+            }
+            set {
+                this.entryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.isActiveField;
+            }
+            set {
+                this.isActiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public tblWeatherDataResponse tblWeatherDataResponse {
+            get {
+                return this.tblWeatherDataResponseField;
+            }
+            set {
+                this.tblWeatherDataResponseField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
+    public partial class tblHourly {
+        
+        private int idField;
+        
+        private int weatherDataResponseIdField;
+        
+        private string summaryField;
+        
+        private string iconField;
+        
+        private System.Nullable<decimal> precipIntensityField;
+        
+        private System.Nullable<decimal> precipProbabilityField;
+        
+        private string precipTypeField;
+        
+        private System.Nullable<decimal> temperatureField;
+        
+        private System.Nullable<decimal> apparentTemperatureField;
+        
+        private System.Nullable<decimal> dewPointField;
+        
+        private System.Nullable<decimal> humidityField;
+        
+        private System.Nullable<decimal> pressureField;
+        
+        private System.Nullable<decimal> windSpeedField;
+        
+        private System.Nullable<decimal> windGustField;
+        
+        private System.Nullable<decimal> windBearingField;
+        
+        private System.Nullable<decimal> uvIndexField;
+        
+        private System.Nullable<decimal> cloudCoverField;
+        
+        private System.Nullable<decimal> visibilityField;
+        
+        private System.Nullable<decimal> ozoneField;
+        
+        private System.Nullable<System.DateTime> entryDateField;
+        
+        private System.Nullable<bool> isActiveField;
+        
+        private tblWeatherDataResponse tblWeatherDataResponseField;
+        
+        /// <remarks/>
+        public int Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int weatherDataResponseId {
+            get {
+                return this.weatherDataResponseIdField;
+            }
+            set {
+                this.weatherDataResponseIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Icon {
+            get {
+                return this.iconField;
+            }
+            set {
+                this.iconField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> PrecipIntensity {
+            get {
+                return this.precipIntensityField;
+            }
+            set {
+                this.precipIntensityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> precipProbability {
+            get {
+                return this.precipProbabilityField;
+            }
+            set {
+                this.precipProbabilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string precipType {
+            get {
+                return this.precipTypeField;
+            }
+            set {
+                this.precipTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Temperature {
+            get {
+                return this.temperatureField;
+            }
+            set {
+                this.temperatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> apparentTemperature {
+            get {
+                return this.apparentTemperatureField;
+            }
+            set {
+                this.apparentTemperatureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> DewPoint {
+            get {
+                return this.dewPointField;
+            }
+            set {
+                this.dewPointField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Humidity {
+            get {
+                return this.humidityField;
+            }
+            set {
+                this.humidityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Pressure {
+            get {
+                return this.pressureField;
+            }
+            set {
+                this.pressureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> windSpeed {
+            get {
+                return this.windSpeedField;
+            }
+            set {
+                this.windSpeedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> windGust {
+            get {
+                return this.windGustField;
+            }
+            set {
+                this.windGustField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> windBearing {
+            get {
+                return this.windBearingField;
+            }
+            set {
+                this.windBearingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> UvIndex {
+            get {
+                return this.uvIndexField;
+            }
+            set {
+                this.uvIndexField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> CloudCover {
+            get {
+                return this.cloudCoverField;
+            }
+            set {
+                this.cloudCoverField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Visibility {
+            get {
+                return this.visibilityField;
+            }
+            set {
+                this.visibilityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<decimal> Ozone {
+            get {
+                return this.ozoneField;
+            }
+            set {
+                this.ozoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<System.DateTime> EntryDate {
+            get {
+                return this.entryDateField;
+            }
+            set {
+                this.entryDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.isActiveField;
+            }
+            set {
+                this.isActiveField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public tblWeatherDataResponse tblWeatherDataResponse {
+            get {
+                return this.tblWeatherDataResponseField;
+            }
+            set {
+                this.tblWeatherDataResponseField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void farenhiteToCelsiusCompletedEventHandler(object sender, farenhiteToCelsiusCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class farenhiteToCelsiusCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -506,11 +1539,11 @@ namespace MvcWebAPI.DataConversionRef {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void celsiusTofarenhiteCompletedEventHandler(object sender, celsiusTofarenhiteCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class celsiusTofarenhiteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -532,11 +1565,11 @@ namespace MvcWebAPI.DataConversionRef {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void saveLiveWeatherDataToDBCompletedEventHandler(object sender, saveLiveWeatherDataToDBCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3056.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class saveLiveWeatherDataToDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

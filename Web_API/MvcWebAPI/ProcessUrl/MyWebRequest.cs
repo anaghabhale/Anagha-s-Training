@@ -1,10 +1,12 @@
-﻿using System;
+﻿using MvcWebAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 
 namespace MvcWebAPI.ProcessUrl
 {
@@ -115,6 +117,20 @@ namespace MvcWebAPI.ProcessUrl
         {
             DateTime sTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
             return (long)(datetime - sTime).TotalSeconds;
+        }
+
+        public static WeatherData GetCoordinates(string region)
+        {
+            using (var client = new WebClient())
+            {
+                string uri = "https://maps.googleapis.com/maps/api/geocode/json?address=&#8221;" + region + "&key=yourapikey";
+
+                string geocodeInfo = client.DownloadString(uri);
+                JavaScriptSerializer oJS = new JavaScriptSerializer();
+                WeatherData latlongdata = oJS.Deserialize<WeatherData>(geocodeInfo);
+
+                return latlongdata;// new WeatherData(Convert.ToDouble(latlongdata.results[0].geometry.location.lat), Convert.ToDouble(latlongdata.results[0].geometry.location.lng));
+            }
         }
 
     }

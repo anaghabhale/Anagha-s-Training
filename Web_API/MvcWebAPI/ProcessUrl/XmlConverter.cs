@@ -18,7 +18,7 @@ namespace MvcWebAPI.ProcessUrl
     {
         public XDocument GetXML()
         {
-            WeatherData _weatherData = new WeatherData();
+            MvcWebAPI.Models.WeatherData _weatherData = new MvcWebAPI.Models.WeatherData();
             _weatherData.Lat = 19.99;
             _weatherData.Log = 73.78;
             _weatherData.DT = DateTime.Now;

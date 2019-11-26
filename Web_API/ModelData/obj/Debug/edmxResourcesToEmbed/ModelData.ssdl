@@ -15,9 +15,9 @@
     <Property Name="PrecipIntensityMax" Type="decimal" Precision="18" Scale="2" />
     <Property Name="precipIntensityMaxTime" Type="datetime" />
     <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="varchar" MaxLength="250" />
     <Property Name="temperatureHigh" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="temperatureHighTime" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureHighTime" Type="datetime" />
     <Property Name="temperatureLow" Type="decimal" Precision="18" Scale="2" />
     <Property Name="temperatureLowTime" Type="datetime" />
     <Property Name="apparentTemperatureHigh" Type="decimal" Precision="18" Scale="2" />
@@ -57,7 +57,7 @@
     <Property Name="Icon" Type="text" />
     <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
     <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="varchar" MaxLength="250" />
     <Property Name="Temperature" Type="decimal" Precision="18" Scale="2" />
     <Property Name="apparentTemperature" Type="decimal" Precision="18" Scale="2" />
     <Property Name="DewPoint" Type="decimal" Precision="18" Scale="2" />
@@ -84,7 +84,7 @@
     <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
     <Property Name="PrecipIntensityError" Type="decimal" Precision="18" Scale="2" />
     <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="varchar" MaxLength="250" />
     <Property Name="EntryDate" Type="datetime" />
     <Property Name="IsActive" Type="bit" />
   </EntityType>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="WeatherForecastModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="WeatherForecastModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblDaily">
           <Key>
             <PropertyRef Name="Id" />
@@ -20,9 +20,9 @@
           <Property Name="PrecipIntensityMax" Type="decimal" Precision="18" Scale="2" />
           <Property Name="precipIntensityMaxTime" Type="datetime" />
           <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="precipType" Type="varchar" MaxLength="250" />
           <Property Name="temperatureHigh" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="temperatureHighTime" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="temperatureHighTime" Type="datetime" />
           <Property Name="temperatureLow" Type="decimal" Precision="18" Scale="2" />
           <Property Name="temperatureLowTime" Type="datetime" />
           <Property Name="apparentTemperatureHigh" Type="decimal" Precision="18" Scale="2" />
@@ -62,7 +62,7 @@
           <Property Name="Icon" Type="text" />
           <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
           <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="precipType" Type="varchar" MaxLength="250" />
           <Property Name="Temperature" Type="decimal" Precision="18" Scale="2" />
           <Property Name="apparentTemperature" Type="decimal" Precision="18" Scale="2" />
           <Property Name="DewPoint" Type="decimal" Precision="18" Scale="2" />
@@ -89,7 +89,7 @@
           <Property Name="PrecipIntensity" Type="decimal" Precision="18" Scale="2" />
           <Property Name="PrecipIntensityError" Type="decimal" Precision="18" Scale="2" />
           <Property Name="precipProbability" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="precipType" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="precipType" Type="varchar" MaxLength="250" />
           <Property Name="EntryDate" Type="datetime" />
           <Property Name="IsActive" Type="bit" />
         </EntityType>
@@ -174,8 +174,7 @@
             <End Role="tblMinutely" EntitySet="tblMinutely" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="WeatherForecastModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -194,9 +193,9 @@
           <Property Name="PrecipIntensityMax" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="precipIntensityMaxTime" Type="DateTime" Precision="3" />
           <Property Name="precipProbability" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="precipType" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="precipType" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="temperatureHigh" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="temperatureHighTime" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="temperatureHighTime" Type="DateTime" Precision="3" />
           <Property Name="temperatureLow" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="temperatureLowTime" Type="DateTime" Precision="3" />
           <Property Name="apparentTemperatureHigh" Type="Decimal" Precision="18" Scale="2" />
@@ -237,7 +236,7 @@
           <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="PrecipIntensity" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="precipProbability" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="precipType" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="precipType" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="Temperature" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="apparentTemperature" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="DewPoint" Type="Decimal" Precision="18" Scale="2" />
@@ -265,7 +264,7 @@
           <Property Name="PrecipIntensity" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="PrecipIntensityError" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="precipProbability" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="precipType" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="precipType" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="EntryDate" Type="DateTime" Precision="3" />
           <Property Name="IsActive" Type="Boolean" />
           <NavigationProperty Name="tblWeatherDataResponse" Relationship="Self.FK_tblMinutely_tblWeatherDataResponse" FromRole="tblMinutely" ToRole="tblWeatherDataResponse" />
@@ -411,13 +410,13 @@
           <EntitySetMapping Name="tblHourlies">
             <EntityTypeMapping TypeName="WeatherForecastModel.tblHourly">
               <MappingFragment StoreEntitySet="tblHourly">
+                <ScalarProperty Name="precipType" ColumnName="precipType" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="weatherDataResponseId" ColumnName="weatherDataResponseId" />
                 <ScalarProperty Name="Summary" ColumnName="Summary" />
                 <ScalarProperty Name="Icon" ColumnName="Icon" />
                 <ScalarProperty Name="PrecipIntensity" ColumnName="PrecipIntensity" />
                 <ScalarProperty Name="precipProbability" ColumnName="precipProbability" />
-                <ScalarProperty Name="precipType" ColumnName="precipType" />
                 <ScalarProperty Name="Temperature" ColumnName="Temperature" />
                 <ScalarProperty Name="apparentTemperature" ColumnName="apparentTemperature" />
                 <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />

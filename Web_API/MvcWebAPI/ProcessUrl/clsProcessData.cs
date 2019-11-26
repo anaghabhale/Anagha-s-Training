@@ -1,4 +1,4 @@
-﻿using MvcWebAPI.Models;
+﻿
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -20,8 +20,9 @@ namespace MvcWebAPI.ProcessUrl
            // IProcessData _iProcessData;
             try {
                 // WeatherForecastEntities1 DataResponse = new WeatherForecastEntities1();
-                tblWeatherDataResponse DataResponse = new tblWeatherDataResponse();
+                ModelData.tblWeatherDataResponse DataResponse = new ModelData.tblWeatherDataResponse();
                DataConversionRef.DataConversion _web = new DataConversionRef.DataConversion();
+                List<ModelData.tblHourly> lstHourly = new List<ModelData.tblHourly>();
                 try
                 {
                     DataResponse.Lat = Convert.ToDecimal(root["latitude"].ToString());
@@ -39,7 +40,7 @@ namespace MvcWebAPI.ProcessUrl
                     try
                     {
                         dynamic objhourly = JsonConvert.DeserializeObject(root["hourly"]["data"].ToString());
-                        List<tblHourly> lstHourly = new List<tblHourly>();
+                       
                         foreach (var obj in objhourly)
                         {
                             tblHourly _hourly = new tblHourly();
@@ -96,12 +97,12 @@ namespace MvcWebAPI.ProcessUrl
                             _daily.Humidity = Convert.ToDecimal(obj.humidity.ToString());
                             _daily.Pressure = Convert.ToDecimal(obj.pressure.ToString());
                             _daily.windSpeed = Convert.ToDecimal(obj.windSpeed.ToString());
-                            _daily.windGust = Convert.ToInt16(obj.windGust.ToString());
-                            _daily.windBearing = Convert.ToInt16(obj.windBearing.ToString());
+                            _daily.windGust = Convert.ToDecimal(obj.windGust.ToString());
+                            _daily.windBearing = Convert.ToDecimal(obj.windBearing.ToString());
                             _daily.CloudCover = Convert.ToDecimal(obj.cloudCover.ToString());
-                            _daily.UvIndex = Convert.ToInt16(obj.uvIndex.ToString());
-                            _daily.uvIndexTime = Convert.ToDateTime(obj.uvIndexTime.ToString());
-                            _daily.Visibility = Convert.ToInt16(obj.visibility.ToString());
+                            _daily.UvIndex = Convert.ToDecimal(obj.uvIndex.ToString());
+                            _daily.uvIndexTime = MyWebRequest.UnixTimeStampToDateTime(Convert.ToDouble(obj.uvIndexTime.ToString()));
+                            _daily.Visibility = Convert.ToDecimal(obj.visibility.ToString());
                             _daily.Ozone = Convert.ToDecimal(obj.ozone.ToString());
                             _daily.temperatureMin = Convert.ToDecimal(obj.temperatureMin.ToString());
                             _daily.temperatureMinTime = MyWebRequest.UnixTimeStampToDateTime(Convert.ToDouble(obj.temperatureMinTime.ToString()));
@@ -141,6 +142,8 @@ namespace MvcWebAPI.ProcessUrl
                 {
                     Console.Write(Err.Message.ToString());
                 }
+              //  MyWebRequest _myWebRequest = new MyWebRequest("http://localhost/Conversion/DataConversion.asmx?op=saveLiveWeatherDataToDB&_tblWeatherDataResponse=" + DataResponse,"POST");
+                //string response = _myWebRequest.GetResponse();
                 _web.saveLiveWeatherDataToDB(DataResponse);
                 return DataResponse;
             }

@@ -11,7 +11,6 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ModelData;
-
 namespace MvcWebAPI.Controllers
 {
     public class ValuesController : ApiController
@@ -41,9 +40,26 @@ namespace MvcWebAPI.Controllers
         public tblWeatherDataResponse Get(double lat, double log)
         {
             Iweather _iWeather;
-            WeatherData _weatherData = new WeatherData();
+            MvcWebAPI.Models.WeatherData _weatherData = new MvcWebAPI.Models.WeatherData();
             _weatherData.Lat = lat;//19.99;
             _weatherData.Log = log;// 73.78;
+            _weatherData.DT = DateTime.Now;
+            _weatherData.WeatherType = "TM";
+
+            _iWeather = clsWeatherFactory.getData(_weatherData);
+            var response = _iWeather.getData(_weatherData);
+            var root = JObject.Parse(response);
+            tblWeatherDataResponse _weatherdataResponse = clsProcessData.dataResponse(root);
+            return _weatherdataResponse;
+        }
+
+        public tblWeatherDataResponse Get(string cityName)
+        {
+            
+                 Iweather _iWeather;
+            MvcWebAPI.Models.WeatherData _weatherData = MyWebRequest.GetCoordinates(cityName);
+            //_weatherData.Lat = lat;//19.99;
+            //_weatherData.Log = log;// 73.78;
             _weatherData.DT = DateTime.Now;
             _weatherData.WeatherType = "TM";
 

@@ -15,9 +15,9 @@
     <Property Name="PrecipIntensityMax" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="precipIntensityMaxTime" Type="DateTime" Precision="3" />
     <Property Name="precipProbability" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="precipType" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="temperatureHigh" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="temperatureHighTime" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="temperatureHighTime" Type="DateTime" Precision="3" />
     <Property Name="temperatureLow" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="temperatureLowTime" Type="DateTime" Precision="3" />
     <Property Name="apparentTemperatureHigh" Type="Decimal" Precision="18" Scale="2" />
@@ -58,7 +58,7 @@
     <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="PrecipIntensity" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="precipProbability" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="precipType" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="Temperature" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="apparentTemperature" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="DewPoint" Type="Decimal" Precision="18" Scale="2" />
@@ -86,7 +86,7 @@
     <Property Name="PrecipIntensity" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="PrecipIntensityError" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="precipProbability" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="precipType" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="precipType" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="EntryDate" Type="DateTime" Precision="3" />
     <Property Name="IsActive" Type="Boolean" />
     <NavigationProperty Name="tblWeatherDataResponse" Relationship="Self.FK_tblMinutely_tblWeatherDataResponse" FromRole="tblMinutely" ToRole="tblWeatherDataResponse" />

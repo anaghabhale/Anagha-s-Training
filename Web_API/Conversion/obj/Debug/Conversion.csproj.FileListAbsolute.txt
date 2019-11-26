@@ -5,8 +5,16 @@ E:\Practice\Web_API\Conversion\bin\Conversion.pdb
 E:\Practice\Web_API\Conversion\bin\EntityFramework.dll
 E:\Practice\Web_API\Conversion\bin\EntityFramework.SqlServer.dll
 E:\Practice\Web_API\Conversion\bin\ModelData.dll
-E:\Practice\Web_API\Conversion\bin\ModelData.pdb
+E:\Practice\Web_API\Conversion\bin\Newtonsoft.Json.dll
+E:\Practice\Web_API\Conversion\bin\System.Net.Http.Formatting.dll
+E:\Practice\Web_API\Conversion\bin\System.Web.Http.dll
+E:\Practice\Web_API\Conversion\bin\System.Web.Http.WebHost.dll
 E:\Practice\Web_API\Conversion\bin\EntityFramework.xml
 E:\Practice\Web_API\Conversion\bin\EntityFramework.SqlServer.xml
+E:\Practice\Web_API\Conversion\bin\ModelData.pdb
+E:\Practice\Web_API\Conversion\bin\Newtonsoft.Json.xml
+E:\Practice\Web_API\Conversion\bin\System.Net.Http.Formatting.xml
+E:\Practice\Web_API\Conversion\bin\System.Web.Http.xml
+E:\Practice\Web_API\Conversion\bin\System.Web.Http.WebHost.xml
 E:\Practice\Web_API\Conversion\obj\Debug\Conversion.dll
 E:\Practice\Web_API\Conversion\obj\Debug\Conversion.pdb

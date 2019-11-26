@@ -21,7 +21,7 @@ namespace ModelData
         public Nullable<decimal> PrecipIntensity { get; set; }
         public Nullable<decimal> PrecipIntensityError { get; set; }
         public Nullable<decimal> precipProbability { get; set; }
-        public Nullable<decimal> precipType { get; set; }
+        public string precipType { get; set; }
         public Nullable<System.DateTime> EntryDate { get; set; }
         public Nullable<bool> IsActive { get; set; }
     

@@ -20,7 +20,7 @@ namespace ModelData
         public string Icon { get; set; }
         public Nullable<decimal> PrecipIntensity { get; set; }
         public Nullable<decimal> precipProbability { get; set; }
-        public Nullable<decimal> precipType { get; set; }
+        public string precipType { get; set; }
         public Nullable<decimal> Temperature { get; set; }
         public Nullable<decimal> apparentTemperature { get; set; }
         public Nullable<decimal> DewPoint { get; set; }

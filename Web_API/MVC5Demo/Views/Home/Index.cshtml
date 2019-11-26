@@ -2,31 +2,110 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <meta charset="UTF-8">
+
+<script>
+    $(document).ready(function () {
+        findWeatherDetails();
+		//$("#owl-demo").owlCarousel({
+		//  autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+		//  items : 3,
+		//  itemsDesktop : [768,3],
+		//  itemsDesktopSmall : [414,4]
+
+		//});
+
+	});
+</script>
+<!-- sky icons -->
+
+       
+@*<script>
+    $(document).ready(function () {
+        //searchButton.addEventListener("click", findWeatherDetails);
+        //searchInput.addEventListener("keyup", enterPressed);
+    });
+</script>*@
+   
+     
+<!-- main -->
+<div class="main-agileits">
+    <h1>Weather Report</h1>
+    <div class="ajax-loader">
+        <img src="../Images/loader.gif" class="img-responsive" />
+    </div>
+    <div class="main-wthree-row">
+        <div class="agileinfo-text">
+            <div class="date">
+                <!-- Date-JavaScript -->
+                <script type="text/javascript">
+						var mydate=new Date()
+						var year=mydate.getYear()
+						if(year<1000)
+						year+=1900
+						var day=mydate.getDay()
+						var month=mydate.getMonth()
+						var daym=mydate.getDate()
+						if(daym<10)
+						daym="0"+daym
+						var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+						var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+						document.write(""+dayarray[day]+" <br> "+daym+"  "+montharray[month]+"  "+year+"")
+                </script>
+                <!-- //Date-JavaScript -->
+            </div>
+            <h2 id="temp">24<span>°</span></h2>
+            <h4>Nashik</h4>
+            <h6 id="Icon">Rain Falling</h6>
+        </div>
+        <div class="w3layouts-slider">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item agile-item">
+                    <canvas id="sleet" width="40" height="40"></canvas>
+                    <h6>Thr</h6>
+                </div>
+                <div class="item agile-item">
+                    <canvas id="rain" width="40" height="40"></canvas>
+                    <h6>Fri</h6>
+                </div>
+                <div class="item agile-item">
+                    <canvas id="partly-cloudy-day" width="40" height="40"></canvas>
+                    <h6>Sat</h6>
+                </div>
+                <div class="item agile-item">
+                    <canvas id="cloudy" width="40" height="40"></canvas>
+                    <h6>Sun</h6>
+                </div>
+                <div class="item agile-item">
+                    <canvas id="clear-night" width="40" height="40"></canvas>
+                    <h6>Mon</h6>
+                </div>
+                <div class="item agile-item">
+                    <canvas id="clear-day" width="40" height="40"></canvas>
+                    <h6>Tue</h6>
+                </div>
+                <div class="item agile-item">
+                    <canvas id="partly-cloudy-night" width="40" height="40"></canvas>
+                    <h6>Wed</h6>
+                </div>
+            </div>
+            <script>
+					
+            </script>
+        </div>
+    </div>
+    
 </div>
-<div id="cont_44538e3817f1e545680a136350585770">
-<script type="text/javascript" async src="https://www.theweather.com/wid_loader/44538e3817f1e545680a136350585770"></script></div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+<!-- //main -->
+<!-- copyrights -->  
+
+
+     
+      
+
+
+
+  
+

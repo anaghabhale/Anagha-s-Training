@@ -18,9 +18,9 @@ namespace ModelData
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblWeatherDataResponse()
         {
-            this.tblDailies = new HashSet<tblDaily>();
-            this.tblHourlies = new HashSet<tblHourly>();
-            this.tblMinutelies = new HashSet<tblMinutely>();
+            this.tblDailies = new List<tblDaily>();
+            this.tblHourlies = new List<tblHourly>();
+            this.tblMinutelies = new List<tblMinutely>();
         }
     
         public int weatherDataResponseId { get; set; }
@@ -46,17 +46,14 @@ namespace ModelData
         public Nullable<System.DateTime> EntryDate { get; set; }
         public Nullable<bool> IsActive { get; set; }
     
-        
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [XmlIgnore]
-        public virtual ICollection<tblDaily> tblDailies { get; set; }
-        
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [XmlIgnore]
-        public virtual ICollection<tblHourly> tblHourlies { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadWrite")]
+        public virtual List<tblDaily> tblDailies { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [XmlIgnore]
-        public virtual ICollection<tblMinutely> tblMinutelies { get; set; }
+        public virtual List<tblHourly> tblHourlies { get; set; }
+
+       
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual List<tblMinutely> tblMinutelies { get; set; }
     }
 }

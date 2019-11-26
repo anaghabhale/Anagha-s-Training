@@ -52,13 +52,13 @@
     <EntitySetMapping Name="tblHourlies">
       <EntityTypeMapping TypeName="WeatherForecastModel.tblHourly">
         <MappingFragment StoreEntitySet="tblHourly">
+          <ScalarProperty Name="precipType" ColumnName="precipType" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="weatherDataResponseId" ColumnName="weatherDataResponseId" />
           <ScalarProperty Name="Summary" ColumnName="Summary" />
           <ScalarProperty Name="Icon" ColumnName="Icon" />
           <ScalarProperty Name="PrecipIntensity" ColumnName="PrecipIntensity" />
           <ScalarProperty Name="precipProbability" ColumnName="precipProbability" />
-          <ScalarProperty Name="precipType" ColumnName="precipType" />
           <ScalarProperty Name="Temperature" ColumnName="Temperature" />
           <ScalarProperty Name="apparentTemperature" ColumnName="apparentTemperature" />
           <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />

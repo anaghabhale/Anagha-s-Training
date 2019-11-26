@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Services;
 
 namespace Conversion
@@ -40,6 +41,14 @@ namespace Conversion
             int i=_ItemRepository.saveWeatherDataToDB(_tblWeatherDataResponse);
             return i;
         }
+
+        //[WebMethod]
+        //public ModelData.tblDaily getLiveDataFromDB(WeatherData _weatherData)
+        //{
+        //    ItemRepository _ItemRepository = new ItemRepository();
+        //    ModelData.tblDaily _tblWeatherDataResponse = _ItemRepository.getWeatherDataFromDB(_weatherData);
+        //    return _tblWeatherDataResponse;
+        //}
 
     }
 }
